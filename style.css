@@ -1,0 +1,148 @@
+
+/* Google Font & Body */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0c003f;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Header with gradient background */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #0c003f, #1a0475);
+}
+
+/* Member Card Styling */
+.member-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 0 0 transparent;
+}
+
+.member-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.member-card img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.member-card .card-title {
+  font-weight: 600;
+  color: #007bff;
+}
+
+.member-card .card-text {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* =========================================================
+   🔥 SCROLL ANIMATIONS
+   ========================================================= */
+
+/* Base hidden state */
+.animate {
+  opacity: 0;
+  transition: all 0.9s ease;
+  will-change: transform, opacity;
+}
+
+/* ===== Fade In ===== */
+.animate.fade {
+  transform: translateY(40px) scale(0.95);
+}
+.animate.fade.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* ===== Bounce In ===== */
+.animate.bounce {
+  transform: translateY(60px);
+  transition: all 0.9s cubic-bezier(.68,-0.55,.27,1.55);
+}
+.animate.bounce.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Slide In Left ===== */
+.animate.left {
+  transform: translateX(-60px);
+}
+.animate.left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ===== Slide In Right ===== */
+.animate.right {
+  transform: translateX(60px);
+}
+.animate.right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ===== Staggered delays ===== */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+.delay-6 { transition-delay: 0.6s; }
+
+/* =========================================================
+   🔥 Responsive Image Height
+   ========================================================= */
+@media (max-width: 768px) {
+  .member-card img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .member-card img {
+    height: 200px;
+  }
+}
+
+/* Base hidden state */
+.animate {
+  opacity: 0;
+  transition: all 0.9s ease;
+  will-change: transform, opacity;
+}
+
+/* Fade */
+.animate.fade { transform: translateY(40px) scale(0.95); }
+.animate.fade.visible { opacity: 1; transform: translateY(0) scale(1); }
+
+/* Bounce */
+.animate.bounce {
+  transform: translateY(60px);
+  transition: all 0.9s cubic-bezier(.68,-0.55,.27,1.55);
+}
+.animate.bounce.visible { opacity: 1; transform: translateY(0); }
+
+/* Slide Left */
+.animate.left { transform: translateX(-60px); }
+.animate.left.visible { opacity: 1; transform: translateX(0); }
+
+/* Slide Right */
+.animate.right { transform: translateX(60px); }
+.animate.right.visible { opacity: 1; transform: translateX(0); }
+
+/* Staggered delays */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+.delay-6 { transition-delay: 0.6s; }
